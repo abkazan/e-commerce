@@ -28,7 +28,7 @@ export default function Home() {
       <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2">
         
         {Object.keys(productData).map((key) => (
-          <Square size={250} color={"#00a2ff"} price={productData[key].price} image={productData[key].image} title={productData[key].name} productKey={key} />
+          <Square size={250} color={"#00a2ff"} price={productData[key].price} image={productData[key].image} title={productData[key].name} productKey={key} key={key}/>
         ))}
 
       </div>
