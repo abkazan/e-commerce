@@ -4,16 +4,8 @@ import { useEffect, useState } from "react";
 import myProductData from "../../static/products.json";
 import Image from "next/image";
 import Link from "next/link";
+import { ProductData, Product } from '../../static/productInterface';
 
-interface Product {
-  image: string;
-  price: number;
-  name: string;
-}
-
-interface ProductData {
-  [key: string]: Product;
-}
 
 const productData: ProductData = myProductData;
 
@@ -42,7 +34,7 @@ export default function ProductDetails() {
       ) : (
         <div className="flex-center flex-col pt-20 gap-5 sm:flex-row md:gap-20 lg:gap-40 xl:gap-40 2xl:gap-40">
           <Link href="/">
-            <i className="fas fa-arrow-left backIcon text-4xl transform transition-transform hover:scale-95 active:scale-100"></i>
+            <i className="fas fa-arrow-left backIcon text-4xl transform transition-transform hover:scale-95 active:scale-100 "></i>
           </Link>
           
           <Image
